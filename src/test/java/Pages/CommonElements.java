@@ -32,6 +32,22 @@ public class CommonElements extends Parent {
 
         @FindBy(xpath = "//div[contains(text(),'succes')]")
         public WebElement succesCheck;
+    
+         @FindBy(xpath = "//h5[id='saas-app-design']")
+         private WebElement SaaSDevelopmentCheck;
+
+        @FindBy(xpath = "//h1[text()='Why Choose Us']")
+        private WebElement MobileAppDevelopmentCheck;
+
+        @FindBy(xpath = "//h1[@text()='Our DevOps']")
+        private WebElement DevOpsCheck;
+
+        @FindBy(xpath = "//h1[@text()='Including a QA']")
+        private WebElement QualityAssuranceCheck;
+
+        @FindBy(xpath = "//h1[@text()='experienced ']")
+        private WebElement ITConsultingCheck;
+
 
 
 
@@ -112,7 +128,14 @@ public class CommonElements extends Parent {
         findAndClick("");// dilogdaki silme butonuna bas
     }
 
-
+ public void find(String strElement) {
+        switch (strElement) {
+            case "SaaSDevelopmentCheck": myElement = SaaSDevelopmentCheck;break;
+            case "MobileAppDevelopmentCheck":myElement=MobileAppDevelopmentCheck;break;
+            case "DevOpsCheck":myElement=DevOpsCheck;break;
+            case "QualityAssuranceCheck":myElement=QualityAssuranceCheck;break;
+            case "ITConsultingCheck":myElement=ITConsultingCheck;break;
+        }
 
 
 
